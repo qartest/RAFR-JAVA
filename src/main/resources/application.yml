@@ -1,0 +1,26 @@
+raft:
+  nodes:
+    - id: 1
+      host: 127.0.0.1
+      port: 8081
+    - id: 2
+      host: 127.0.0.1
+      port: 8082
+    - id: 3
+      host: 127.0.0.1
+      port: 8083
+    - id: 4
+      host: 127.0.0.1
+      port: 8084
+    - id: 5
+      host: 127.0.0.1
+      port: 8085
+  timing:
+    heartbeat-interval: 100ms
+    election-timeout-min: 500ms
+    election-timeout-max: 900ms
+logging:
+  level:
+    root: INFO
+    t.boev.work.service.RaftService: DEBUG
+    t.boev.work.transport.RaftNodeClient: DEBUG
