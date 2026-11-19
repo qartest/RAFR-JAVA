@@ -183,7 +183,6 @@ public class RaftService {
                 log.info("[Node {}] Resetting election timer after failed election", candidateId);
                 electionTimer.reset();
             }
-
         }).then();
 
     }

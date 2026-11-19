@@ -17,11 +17,11 @@ public class HeartbeatTimer {
 
     private final Runnable onTimeout;
     private final RaftNetworkConfig config;
-    private final RaftNode raftNode;
+
 
     private ScheduledFuture<?> timeoutTask;
 
-    public void reset(){
+    public synchronized void reset(){
         if(timeoutTask != null){
             timeoutTask.cancel(false);
         }
